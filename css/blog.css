@@ -12,6 +12,7 @@
   align-items: center;
   height: 5rem;
 }
+
 .header__logo {
   max-height: 3rem;
   transition-duration: 0.5s;
@@ -33,6 +34,7 @@
   width: 100%;
   justify-content: space-between;
 }
+
 .header__link {
   text-decoration: none;
   color: #fff;
@@ -53,7 +55,23 @@
   color: #105977;
   padding: 1.5rem 0;
 }
-/* end header */
+
+/* HEADER responsiveness */
+@media screen and (min-width: 320px) and (max-width: 739px) {
+  .header__link {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 579px) {
+  .header__list {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+  }
+}
+
+/* HEADER END */
 
 h2 {
   color: #105977;
@@ -99,6 +117,7 @@ h3 {
   background-color: #3A728E;
 }
 
+/* images*/
 
 .blogPost {
   width: 33.3%;
@@ -109,7 +128,7 @@ h3 {
 }
 
 .blogPost:hover {
-  opacity: 70%;
+  opacity: 60%;
 }
 
 .blogPost2 {
@@ -121,8 +140,9 @@ h3 {
 }
 
 .blogPost2:hover {
-  opacity: 70%;
+  opacity: 60%;
 }
+
 p {
   text-align:justify;
 }
@@ -156,7 +176,6 @@ ul {
   padding: 10px 25px;
   border: 10px;
   border-top: none;
-  align-content: left;
 }
 
 ul li {
@@ -164,7 +183,6 @@ ul li {
   margin: 5px 0;
   text-align: center;
   font-size: 16px;
-  list-style:repeating-radial-gradient()
 }
 
 ul li input[type="checkbox"] { 
@@ -177,10 +195,6 @@ ul li span.list {
   overflow: hidden;
   padding: 0 5px;
   transition: 0.5s;
-}
-
-ul li input[type= "checkbox"]:checked ~ span.list{
-  color: black;
 }
 
 ul li span.list:before{
@@ -196,8 +210,8 @@ ul li span.list:before{
 }
 
 ul li:hover{
- opacity: 70%; 
- transition-duration: 0.5s;
+ color: orange; 
+ transition-duration: 0.2s;
 }
 
 ul li input[type= "checkbox"]:checked ~ span.list::before{
@@ -223,49 +237,34 @@ font-size: 30px
 .quizTitle {
   align-content: center;
   margin-bottom: 2rem;
+  border: 10rem;
   color: #105977;
   font-size: 30px
 }
 
-#quiz {
-  background-color: orange;
-  text-align: center;
-  margin-bottom: 30rem;
-  font-size: 18px;
-  font-style: normal;
-  color: black; 
-}
-
-#submitButton {
-  background-color: orange;
-  color: #fff;
-  font-size: 18px;
-  font-style: normal;
-  text-align: center;
-}
-
-/* quiz*/
-
-.quizTitle {
-  align-content: center;
-  margin-bottom: 2rem;
-  border-radius: 10rem;
+form {
+  display: inline-block;
 }
 
 #quiz {
   border: black;
   border-style: double;
   background-color: orange;
-  margin-bottom: 2rem;
+  text-align: center;
   border-radius: 5rem;
-  margin-left: 15.15%;
-  margin-right: 15.15%;
+  margin-left: 33.33%;
+  margin-right: 33.33%;
+  font-size: 18px;
+  font-style: normal;
+  color: black; 
 }
 
 #submitButton {
-  background-color: rgb(7, 7, 6);
+  background-color: black;
   color: #fff;
-  margin-left: 10 ;
+  font-size: 18px;
+  font-style: normal;
+  text-align: center;
 }
 
 #results {
@@ -346,27 +345,60 @@ font-size: 30px
   .footer__nav {
     flex-wrap: wrap;
     justify-content: space-around;
-    /* display: flex;
-    align-items: flex-start;
-    width: 100%;
-    justify-content: space-between; */
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 549px) {
+@media screen and (min-width: 444px) and (max-width: 549px) {
   .footer__nav {
     flex-wrap: wrap;
     justify-content: space-around;
   }
 
   .form__name,
-  .form__email,
-  .form__textarea {
+  .form__email {
     width: 10rem;
+  }
+
+  .form__textarea {
+    width: 10.2rem;
   }
 }
 
-/* end footer */
+@media screen and (min-width: 387px) and (max-width: 443px) {
+  .footer__nav {
+    display: flex;
+    flex-direction: column;
+  }
 
+  .footer__form {
+    padding-left: 2.5rem;
+  }
 
+  .form__name,
+  .form__email {
+    width: 10rem;
+  }
+
+  .form__textarea {
+    width: 10.2rem;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 386px) {
+  .footer__nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form__name,
+  .form__email {
+    width: 8.3rem;
+  }
+
+  .form__textarea {
+    width: 8.5rem;
+  }
+}
+
+/* FOOTER end */
 
