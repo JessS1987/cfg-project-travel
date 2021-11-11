@@ -73,6 +73,15 @@
 
 /* HEADER END */
 
+/* title */
+
+.blog_title {
+  color: #105977;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  }
+  
 h2 {
   color: #105977;
   font-size: 30px;
@@ -86,6 +95,12 @@ h3 {
 }
 
 /*blog posts*/
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  }
 
 .first {
   border: black;
@@ -189,12 +204,18 @@ ul li input[type="checkbox"] {
   display: none;
 }
 
+
 ul li span.list {
   position: relative;
   display: inline-block;
   overflow: hidden;
   padding: 0 5px;
   transition: 0.5s;
+}
+
+ul li input[type= "checkbox"]:checked ~ span.list
+{
+  color: black;
 }
 
 ul li span.list:before{
@@ -218,20 +239,6 @@ ul li input[type= "checkbox"]:checked ~ span.list::before{
   left: 100%;
   transition-delay: 00.5s;
 }
-
-.container {
-display: flex;
-flex-direction: column;
-width: 100%;
-}
-
-/* title */
-
-.blog_title {
-color: #105977;
-font-size: 30px
-}
-
 /* quiz*/
 
 .quizTitle {
@@ -401,4 +408,6 @@ form {
 }
 
 /* FOOTER end */
+
+
 
